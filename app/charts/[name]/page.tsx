@@ -28,7 +28,7 @@ export default function Chart() {
   const [currentColor, setCurrentColor] = useState("white");
 
   const initialColors = Array.from({ length: rowsCount }, () =>
-    Array.from({ length: colsCount }, () => "gray.200")
+    Array.from({ length: colsCount }, () => "gray.200"),
   );
 
   const [cellColors, setCellColors] = useState(initialColors);
@@ -57,7 +57,7 @@ export default function Chart() {
         cursor="pointer"
         css={{ aspectRatio: "1 / 1" }}
       />
-    ))
+    )),
   );
 
   return (
@@ -76,26 +76,34 @@ export default function Chart() {
         {/* Nav Bar */}
         <Flex alignItems="center" h="32px">
           <Button gap="2px" size="xs" variant="ghost">
-            <Text textStyle="md">File</Text>
-            <Icon aria-label="file chevron down" size="sm">
+            <Text textStyle="md" color="white">
+              File
+            </Text>
+            <Icon aria-label="file chevron down" color="white" size="sm">
               <IoChevronDown />
             </Icon>
           </Button>
           <Button gap="2px" size="xs" variant="ghost">
-            <Text textStyle="md">Edit</Text>
-            <Icon aria-label="edit chevron down" size="sm">
+            <Text textStyle="md" color="white">
+              Edit
+            </Text>
+            <Icon aria-label="edit chevron down" color="white" size="sm">
               <IoChevronDown />
             </Icon>
           </Button>
           <Button gap="2px" size="xs" variant="ghost">
-            <Text textStyle="md">View</Text>
-            <Icon aria-label="view chevron down" size="sm">
+            <Text textStyle="md" color="white">
+              View
+            </Text>
+            <Icon aria-label="view chevron down" color="white" size="sm">
               <IoChevronDown />
             </Icon>
           </Button>
           <Button gap="2px" size="xs" variant="ghost">
-            <Text textStyle="md">Help</Text>
-            <Icon aria-label="help chevron down" size="sm">
+            <Text textStyle="md" color="white">
+              Help
+            </Text>
+            <Icon aria-label="help chevron down" color="white" size="sm">
               <IoChevronDown />
             </Icon>
           </Button>
@@ -116,6 +124,7 @@ export default function Chart() {
             borderColor="white"
             borderBottomRadius="0"
             marginLeft="12px"
+            color="white"
             onClick={() => {
               setIsDraw(true);
               setIsErase(false);
@@ -129,6 +138,7 @@ export default function Chart() {
             variant="outline"
             borderColor="white"
             borderBottomRadius="0"
+            color="white"
             onClick={() => {
               setIsErase(true);
               setIsDraw(false);
